@@ -1,0 +1,56 @@
+<!--pages/demo/demo01.wxml-->
+<!-- <text>demo1</text> -->
+<view>{{msg}}</view>
+<view>{{number}}</view>
+<view>{{person.name}}</view>
+<view>{{person.age}}</view>
+<view>
+<checkbox checked="{{isChecked}}"></checkbox>
+</view>
+<view>
+  <view
+  wx:for="{{list1}}"
+  wx:for-item="item"
+  wx:for-index="index"
+  wx:key="id"
+  >
+    索引：{{index}}
+    =====
+    名称：{{item.name}}
+  </view>
+</view>
+<view>
+  <view>
+  对象循环
+  </view>
+  <view 
+  wx:for="{{person}}"
+  wx:for-item="value"
+  wx:for-index="key"
+  wx:key="age"
+  >
+     属性:{{key}}
+     --
+     值:{{value}}
+     </view>
+</view>
+<view>
+<block
+wx:for="{{list1}}"
+wx:for-item="item"
+wx:for-index="index"
+wx:key="id"
+class="my_list"
+>
+      索引：{{index}}
+      --
+      值:{{item.name}}
+</block>
+</view>
+ <view>
+ <view>条件渲染</view>
+ <view wx:if="{{false}}">显示</view>
+ <view wx:elif="{{true}}">显示1</view>
+   <view hidden >hidden1</view>
+     <view hidden="{{false}}" >hidden2</view>
+ </view>

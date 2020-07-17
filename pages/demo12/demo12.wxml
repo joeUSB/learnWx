@@ -1,0 +1,20 @@
+<!--pages/demo12/demo12.wxml-->
+<text>pages/demo12/demo12.wxml</text>
+<icon type="success" size="60" color="#0094ff"></icon>
+<radio-group bindchange="handleChange">  
+<radio color="red" value="male">男</radio>
+<radio color="blue" value="female">女</radio>
+</radio-group>
+ <view>您选中的是:{{gender}}</view>
+
+ <view>
+  <checkbox-group bindchange="handleItemChange">
+    <checkbox value="{{item.value}}" wx:for="{{list}}" wx:key="id">
+      {{item.name}}
+    </checkbox>
+
+  </checkbox-group>
+  <view>
+    选中的水果:{{checkedList}}
+  </view>
+</view>

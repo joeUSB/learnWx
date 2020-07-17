@@ -1,0 +1,10 @@
+/* pages/demo4/demo4.wxss */
+view{
+  /* width: 200rpx; */
+  height: 200rpx;
+  font-size: 100rpx;
+  background-color: rgb(255, 0, 247);
+ /* 以下代码写法是错误  */
+ /*  width:750 rpx * 100 / 375 ;  */
+ width:calc(750rpx * 100 / 375);
+}
